@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#F4F7FC;
+}
+
+.login-page{
+    display:flex;
+    min-height:100vh;
+}
+
+.left-panel{
+    width:35%;
+    background:linear-gradient(135deg,#2563EB,#1E40AF);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+    border-right:1px solid rgb(4,48,245);
+}
+
+.portal-title{
+    color:white;
+    font-size:60px;
+    font-weight:700;
+    line-height:1.2;
+    text-align:center;
+}
+
+.right-panel{
+    width:60%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-box{
+    width:420px;
+    background:white;
+    padding:45px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    transition:0.3s ease;
+}
+
+.login-box:hover{
+    transform:translateY(-5px);
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+}
+
+.login-box h2{
+    text-align:center;
+    font-size:30px;
+    color:#1F2937;
+    margin-bottom:30px;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+label{
+    margin-bottom:8px;
+    color:#374151;
+    font-size:14px;
+    font-weight:500;
+}
+
+input{
+    padding:14px 18px;
+    margin-bottom:20px;
+    border:1px solid #D1D5DB;
+    border-radius:10px;
+    font-size:15px;
+    transition:.25s;
+}
+
+input:focus,input:hover{
+    outline:none;
+    border-color:#2563EB;
+    box-shadow:0 0 0 4px rgba(37,99,235,.15);
+}
+
+button{
+    margin-top:10px;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#2563EB;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.25s;
+}
+
+button:hover{
+    background:#1D4ED8;
+    transform:translateY(-2px);
+}
+
+button:active{
+    transform:translateY(0);
+}
+
+.error{
+    color:#DC2626;
+    text-align:center;
+    margin-bottom:15px;
+    font-size:14px;
+}
+
+@media(max-width:900px){
+    .left-panel{
+        display:none;
+    }
+
+    .right-panel{
+        width:100%;
+    }
+
+    .login-box{
+        width:90%;
+    }
+}
