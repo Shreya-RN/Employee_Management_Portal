@@ -9,6 +9,7 @@
 
 body{
     background:#F4F7FC;
+    overflow-x:hidden;
 }
 
 .login-page{
@@ -17,7 +18,7 @@ body{
 }
 
 .left-panel{
-    width:35%;
+    flex:1;
     background:linear-gradient(135deg,#2563EB,#1E40AF);
     display:flex;
     justify-content:center;
@@ -35,14 +36,15 @@ body{
 }
 
 .right-panel{
-    width:60%;
+    flex:3;
     display:flex;
     justify-content:center;
     align-items:center;
 }
 
 .login-box{
-    width:420px;
+    width:90%;
+    max-width:420px;
     background:white;
     padding:45px;
     border-radius:20px;
@@ -50,9 +52,18 @@ body{
     transition:0.3s ease;
 }
 
-.login-box:hover{
-    transform:translateY(-5px);
-    box-shadow:0 20px 45px rgba(0,0,0,.12);
+@media (hover:hover){
+
+    .login-box:hover{
+        transform:translateY(-5px);
+        box-shadow:0 20px 45px rgba(0,0,0,.12);
+    }
+
+    button:hover{
+        background:#1D4ED8;
+        transform:translateY(-2px);
+    }
+
 }
 
 .login-box h2{
@@ -74,7 +85,7 @@ label{
     font-weight:500;
 }
 
-input{
+.login-box input{
     padding:14px 18px;
     margin-bottom:20px;
     border:1px solid #D1D5DB;
@@ -89,7 +100,7 @@ input:focus,input:hover{
     box-shadow:0 0 0 4px rgba(37,99,235,.15);
 }
 
-button{
+.login-box button{
     margin-top:10px;
     padding:14px;
     border:none;
@@ -130,4 +141,32 @@ button:active{
     .login-box{
         width:90%;
     }
+}
+
+@media (max-width:480px){
+
+    .login-box{
+        padding:30px 22px;
+        border-radius:15px;
+    }
+
+    .login-box h2{
+        font-size:26px;
+        margin-bottom:25px;
+    }
+
+    .login-box input{
+        padding:13px 15px;
+        font-size:14px;
+    }
+
+    .login-box button{
+        padding:13px;
+        font-size:15px;
+    }
+
+    label{
+        font-size:13px;
+    }
+
 }
