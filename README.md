@@ -1,8 +1,8 @@
-# 👨‍💼 Employee Management Portal
+#  Employee Management Portal
 
 A full-stack **Employee Management Portal** built using the **PERN Stack (PostgreSQL, Express.js, React, and Node.js)**. This project is being developed as part of my internship to understand authentication, CRUD operations, REST APIs, database integration, and frontend-backend communication.
 
-> **🚧 Project Status:** Under Development
+> ** Project Status:** Under Development
 
 ---
 
@@ -16,12 +16,12 @@ A full-stack **Employee Management Portal** built using the **PERN Stack (Postgr
 - ✔️ PostgreSQL Database Connection
 - ✔️ Login REST API
 
-### In Progress
-- ⏳ Dashboard
-- ⏳ Employee CRUD Operations
-- ⏳ Search Functionality
-- ⏳ Employee Profile
-- ⏳ Dashboard Statistics
+### ⏳ In Progress
+-  Dashboard
+-  Employee CRUD Operations
+-  Search Functionality
+-  Employee Profile
+-  Dashboard Statistics
 
 ---
 
@@ -114,7 +114,7 @@ Employee-Portal/
 ## 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/<your-username>/Employee-Portal.git
+git clone https://github.com/Shreya-RN/Employee-Portal.git
 cd Employee-Portal
 ```
 
@@ -201,7 +201,7 @@ This project focuses on:
 
 ---
 
-# 👩‍💻 Author
+# Author
 
 **Shreya Nayak**
 
