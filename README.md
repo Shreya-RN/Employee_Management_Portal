@@ -5,6 +5,21 @@ A full-stack **Employee Management Portal** built using the **PERN Stack (Postgr
 > **Project Status:** ✅ Completed
 
 ---
+## Screenshots
+<table>
+  <tr>
+    <td><img src="Frontend/src/assets/screenshots/login_page.png" width="250"></td>
+    <td><img src="Frontend/src/assets/screenshots/dashboard.png" width="250"></td>
+    <td><img src="Frontend/src/assets/screenshots/employee_list.png" width="250"></td>
+  </tr>
+  <tr>
+    <td><img src="Frontend/src/assets/screenshots/add_employees.png" width="250"></td>
+    <td><img src="Frontend/src/assets/screenshots/view_employees.png" width="250"></td>
+    <td><img src="Frontend/src/assets/screenshots/edit_employees.png" width="250"></td>
+  </tr>
+</table>
+
+---
 
 # ✨ Features
 
