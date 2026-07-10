@@ -1,83 +1,93 @@
-#  Employee Management Portal
+# 👨‍💼 Employee Management Portal
 
-A full-stack **Employee Management Portal** built using the **PERN Stack (PostgreSQL, Express.js, React, and Node.js)**. This project is being developed as part of my internship to understand authentication, CRUD operations, REST APIs, database integration, and frontend-backend communication.
+A full-stack **Employee Management Portal** built using the **PERN Stack (PostgreSQL, Express.js, React.js, and Node.js)**. This project was developed during my internship to gain hands-on experience with full-stack development, REST APIs, authentication, database management, and responsive UI design.
 
-> ** Project Status:** Under Development
+> **Project Status:** ✅ Completed
 
 ---
 
-## ✅ Current Progress
+# ✨ Features
 
-### Completed
-- ✔️ Admin Login UI
-- ✔️ Email & Password Validation
-- ✔️ JWT Authentication
-- ✔️ Protected Login Flow
-- ✔️ PostgreSQL Database Connection
-- ✔️ Login REST API
+### 🔐 Authentication
+- Secure Admin Login
+- JWT Authentication
+- Protected Routes
+- Session Management using Local Storage
 
-### ⏳ In Progress
--  Dashboard
--  Employee CRUD Operations
--  Search Functionality
--  Employee Profile
--  Dashboard Statistics
+### 👥 Employee Management
+- View Employee List
+- Add New Employee
+- Edit Employee Details
+- Soft Delete Employee (Status changed to Inactive)
+- View Employee Profile
+- Employee Search (Name, Email, Department)
+
+### 📊 Dashboard
+- Employee Statistics Cards
+  - Total Employees
+  - Active Employees
+  - Inactive Employees
+- Department-wise Employee Distribution (Bar Chart)
+
+### 📱 Responsive Design
+- Mobile-Friendly Layout
+- Responsive Navigation
+- Responsive Forms
+- Responsive Dashboard
+- Responsive Employee Table
 
 ---
 
 # 🛠 Tech Stack
 
-### Frontend
+## Frontend
 - React.js
-- React Router
+- React Router DOM
 - Axios
-- CSS
+- Recharts
+- CSS3
 
-### Backend
+## Backend
 - Node.js
 - Express.js
+- JWT
+- bcrypt
 
-### Database
+## Database
 - PostgreSQL
 
-### Authentication
-- JSON Web Token (JWT)
+## API Testing
+- Postman
 
-### Tools
+## Tools
 - Git
 - GitHub
-- Postman
 - VS Code
 
 ---
 
-# 📁 Project Structure
+# 📂 Project Structure
 
 ```text
 Employee-Portal/
 │
-├── frontend/
-│   ├── public/
-│   └── src/
-│       ├── assets/
-│       ├── components/
-│       ├── context/
-│       ├── pages/
-│       ├── routes/
-│       ├── services/
-│       ├── utils/
-│       ├── App.jsx
-│       └── main.jsx
+├── Frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── assets/
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   └── package.json
 │
-├── backend/
+├── Backend/
 │   ├── config/
 │   ├── controllers/
 │   ├── middleware/
 │   ├── models/
 │   ├── routes/
-│   ├── utils/
-│   ├── app.js
-│   ├── server.js
+│   ├── Server.js
 │   ├── package.json
 │   └── .env
 │
@@ -87,31 +97,28 @@ Employee-Portal/
 ├── postman/
 │   └── Employee-Portal.postman_collection.json
 │
-├── .gitignore
 ├── README.md
-└── package.json (optional)
+└── .gitignore
 ```
 
 ---
 
-# ✨ Planned Features
+# 📸 Application Modules
 
-- 🔐 Secure Admin Login
-- 📊 Dashboard with Employee Statistics
+- 🔐 Login
+- 📊 Dashboard
+- 👥 Employee List
 - ➕ Add Employee
-- 📋 View Employee List
-- ✏️ Edit Employee Details
-- ❌ Delete Employee
+- ✏️ Edit Employee
+- 👤 Employee Details
 - 🔍 Search Employees
-- 👤 Employee Profile
-- 📱 Responsive User Interface
-- ⚠️ Centralized Error Handling
+- ❌ Soft Delete Employee
 
 ---
 
 # 🚀 Getting Started
 
-## 1️⃣ Clone the Repository
+## Clone Repository
 
 ```bash
 git clone https://github.com/Shreya-RN/Employee-Portal.git
@@ -120,38 +127,51 @@ cd Employee-Portal
 
 ---
 
-## 2️⃣ Frontend Setup
+## Backend
 
 ```bash
-cd frontend
+cd Backend
+npm install
+node Server.js
+```
+
+---
+
+## Frontend
+
+```bash
+cd Frontend
 npm install
 npm run dev
 ```
 
 ---
 
-## 3️⃣ Backend Setup
+## Database Setup
 
-```bash
-cd backend
-npm install
-npm start
+1. Install PostgreSQL
+2. Create a database
+
+```sql
+CREATE DATABASE employee_portal;
 ```
 
----
+3. Execute
 
-## 4️⃣ Database Setup
+- Replace YOUR_PASSWORD with actual password in Backend/hashPassword.js
+- Replace YOUR_BCRYPT_HASH with the generated hash in Database/schema.sql
 
-- Install PostgreSQL
-- Create the database
-- Execute `database/schema.sql`
-- Configure the `.env` file
+```
+Database/schema.sql
+```
+
+4. Configure the `.env` file.
 
 ---
 
 # 🔑 Environment Variables
 
-Create a `.env` file inside the `backend` folder.
+Create a `.env` file inside **Backend/**
 
 ```env
 PORT=5000
@@ -167,55 +187,74 @@ JWT_SECRET=your_secret_key
 
 ---
 
-# 📚 Learning Objectives
+# 📡 REST API Endpoints
 
-This project focuses on:
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| POST | `/login` | Admin Login |
+| GET | `/dashboard` | Dashboard Statistics |
+| GET | `/dashboard/departments` | Department Statistics |
+| GET | `/employees` | Get All Employees |
+| GET | `/employees/:employeeId` | View Employee |
+| GET | `/employees/search` | Search Employees |
+| POST | `/employees` | Add Employee |
+| PUT | `/employees/:employeeId` | Edit Employee |
+| PUT | `/employees/:employeeId/delete` | Soft Delete Employee |
+
+---
+
+# 📈 Dashboard Analytics
+
+The dashboard includes:
+
+- Total Employees
+- Active Employees
+- Inactive Employees
+- Department-wise Employee Distribution using Recharts
+
+---
+
+# 📚 What I Learned
 
 - JWT Authentication
-- React Routing
-- Express REST APIs
-- PostgreSQL Integration
-- CRUD Operations
-- API Testing with Postman
-- Frontend & Backend Integration
-- Clean Project Architecture
+- Protected Routes
+- REST API Development
+- PostgreSQL CRUD Operations
+- React State Management
+- React Router
+- Axios API Integration
+- Responsive UI Design
+- Recharts Data Visualization
+- Backend Architecture (MVC)
 - Git & GitHub Workflow
+- Postman API Testing
 
 ---
 
-# 📌 Project Roadmap
+# 🔮 Future Enhancements
 
-- [x] Login Module
-- [x] JWT Authentication
-- [x] PostgreSQL Connection
-- [ ] Dashboard
-- [ ] Add Employee
-- [ ] Employee List
-- [ ] Edit Employee
-- [ ] Delete Employee
-- [ ] Search Employee
-- [ ] Employee Profile
-- [ ] Dashboard Analytics
-- [ ] Final Testing
-- [ ] Deployment
+- Pagination
+- Sorting & Advanced Filters
+- Employee Profile Picture Upload
+- Export Employees to Excel/PDF
+- Role-Based Authentication
+- Dark Mode
+- Dashboard Analytics Expansion
 
 ---
 
-# Author
+# 👩‍💻 Author
 
 **Shreya Nayak**
 
 B.Tech Computer Science & Engineering  
 Presidency University, Bengaluru
 
-GitHub: https://github.com/Shreya-RN
-
-LinkedIn: https://linkedin.com/in/shreya-nayak-srn
+- GitHub: https://github.com/Shreya-RN
+- LinkedIn: https://linkedin.com/in/shreya-nayak-srn
 
 ---
 
 # 📄 License
 
-This project is developed for internship learning purposes and is intended for educational use.
-
----
+This project was developed as part of my internship for learning and educational purposes.
