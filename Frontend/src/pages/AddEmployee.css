@@ -1,0 +1,149 @@
+.add-employee-container{
+    width:90%;
+    max-width:1100px;
+    margin:40px auto;
+}
+
+.add-employee-container h1{
+    color:#1F2937;
+    margin-bottom:30px;
+}
+
+.employee-form-card{
+    background:#FFFFFF;
+    border-radius:16px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    padding:35px;
+}
+
+.employee-form-card h2{
+    color:#2563EB;
+    margin-bottom:30px;
+    padding-bottom:15px;
+    border-bottom:1px solid #E5E7EB;
+}
+
+.employee-form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px 35px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group label{
+    margin-bottom:8px;
+    font-size:14px;
+    font-weight:500;
+    color:#374151;
+}
+
+.form-group input,
+.form-group select{
+    width:100%;
+    box-sizing:border-box;
+    padding:12px 15px;
+    border:1px solid #D1D5DB;
+    border-radius:10px;
+    font-size:15px;
+    outline:none;
+    transition:.2s;
+    background:white;
+}
+
+.form-group input:focus,
+.form-group select:focus{
+    border-color:#2563EB;
+    box-shadow:0 0 0 4px rgba(37,99,235,.15);
+}
+
+.form-buttons{
+    grid-column:1/-1;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    gap:10px;
+    margin-top:35px;
+}
+
+.cancel-btn,
+.save-btn{
+    padding:12px 28px;
+    border:none;
+    border-radius:10px;
+    font-size:15px;
+    font-weight:500;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.cancel-btn{
+    min-width:120px;
+}
+
+.save-btn{
+    min-width:170px;
+}
+
+.cancel-btn{
+    background:#E5E7EB;
+    color:#374151;
+}
+
+.cancel-btn:hover{
+    background:#D1D5DB;
+}
+
+.save-btn{
+    background:#2563EB;
+    color:white;
+}
+
+.save-btn:hover{
+    background:#1D4ED8;
+}
+
+@media(max-width:768px){
+    .employee-form{
+        grid-template-columns:1fr;
+    }
+
+    .employee-form-card{
+        padding:25px;
+    }
+
+    .form-buttons{
+        flex-direction:column;
+        gap:10px;
+        margin-top:35px;
+    }
+
+    .cancel-btn,
+    .save-btn{
+        width:100%;
+        min-width:0;
+    }
+}
+
+@media(max-width:480px){
+    .add-employee-container{
+        width:95%;
+    }
+
+    .employee-form-card{
+        padding:20px;
+    }
+
+    .add-employee-container h1{
+        font-size:28px;
+        text-align:center;
+    }
+
+    .employee-form-card h2{
+        font-size:22px;
+        text-align:center;
+    }
+}
